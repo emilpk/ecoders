@@ -6,6 +6,8 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
+import myInfo from "@/data/my-info.json";
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -43,7 +45,9 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <Button className="bg-pink-600 hover:bg-pink-700">Hire Me</Button>
+            <a href={`mailto:${myInfo.email}?subject=I want to hire you!`}>
+              <Button className="bg-pink-600 hover:bg-pink-700">Hire Me</Button>
+            </a>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -73,9 +77,11 @@ export function Header() {
                   {item.name}
                 </Link>
               ))}
-              <Button className="bg-pink-600 hover:bg-pink-700 w-fit">
-                Hire Me
-              </Button>
+              <a href={`mailto:${myInfo.email}?subject=I want to hire you!`}>
+                <Button className="bg-pink-600 hover:bg-pink-700 w-fit">
+                  Hire Me
+                </Button>
+              </a>
             </nav>
           </div>
         )}

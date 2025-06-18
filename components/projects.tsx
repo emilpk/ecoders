@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ArrowRight, ExternalLink } from "lucide-react";
 
 const featuredProjects = [
   {
@@ -28,16 +28,19 @@ const featuredProjects = [
     category: "CRM Development",
     impact: "35% ↑ Agent Productivity",
   },
-]
+];
 
 export function Projects() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            Featured Projects
+          </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Recent work showcasing modern web development and successful business outcomes
+            Recent work showcasing modern web development and successful
+            business outcomes
           </p>
         </div>
 
@@ -49,7 +52,9 @@ export function Projects() {
                   <Badge variant="outline" className="text-xs">
                     {project.category}
                   </Badge>
-                  <span className="text-sm font-semibold text-green-600">{project.impact}</span>
+                  <span className="text-sm font-semibold text-green-600">
+                    {project.impact}
+                  </span>
                 </div>
                 <CardTitle className="text-xl">{project.title}</CardTitle>
               </CardHeader>
@@ -57,7 +62,11 @@ export function Projects() {
                 <p className="text-gray-600 mb-4">{project.description}</p>
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs">
+                    <Badge
+                      key={techIndex}
+                      variant="secondary"
+                      className="text-xs"
+                    >
                       {tech}
                     </Badge>
                   ))}
@@ -72,12 +81,16 @@ export function Projects() {
         </div>
 
         <div className="text-center">
-          <Button size="lg" variant="outline" className="border-pink-300 text-pink-700 hover:bg-pink-50">
+          <Button
+            size="lg"
+            variant="outline"
+            className="border-pink-300 text-pink-700 hover:bg-pink-50"
+          >
             View All Projects
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -1,9 +1,10 @@
-import Link from "next/link"
-import Image from "next/image"
-import { ExternalLink, Github, Linkedin, Twitter, Mail } from "lucide-react"
+import Link from "next/link";
+import Image from "next/image";
+import { ExternalLink, Github, Linkedin, Twitter, Mail } from "lucide-react";
+import myInfo from "@/data/my-info.json";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear()
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -12,23 +13,42 @@ export function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <Link href="/" className="flex items-center space-x-3 mb-4">
-              <Image src="/logo.png" alt="ecoders.dev" width={32} height={32} className="rounded-lg" />
-              <span className="text-xl font-bold">ecoders.dev</span>
+              <Image
+                src="/logo.png"
+                alt={`${myInfo.domain}`}
+                width={32}
+                height={32}
+                className="rounded-lg"
+              />
+              <span className="text-xl font-bold">{`${myInfo.domain}`}</span>
             </Link>
             <p className="text-gray-400 text-sm mb-4">
-              Senior web developer with 27+ years of experience, creating modern web solutions and digital products.
+              Senior web developer with 27+ years of experience, creating modern
+              web solutions and digital products.
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
                 <Github className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-pink-400 transition-colors">
+              <a
+                href="#"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="mailto:emil@ecoders.dev" className="text-gray-400 hover:text-pink-400 transition-colors">
+              <a
+                href="mailto:emil@ecoders.dev"
+                className="text-gray-400 hover:text-pink-400 transition-colors"
+              >
                 <Mail className="h-5 w-5" />
               </a>
             </div>
@@ -39,27 +59,42 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Navigation</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/about"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/projects"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/products"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Products
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-400 hover:text-white transition-colors">
+                <Link
+                  href="/#contact"
+                  className="text-gray-400 hover:text-white transition-colors"
+                >
                   Contact
                 </Link>
               </li>
@@ -93,13 +128,19 @@ export function Footer() {
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
                   Blog on Medium
                   <ExternalLink className="h-3 w-3 ml-1" />
                 </a>
               </li>
               <li>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors flex items-center">
+                <a
+                  href="#"
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
                   Hashnode Articles
                   <ExternalLink className="h-3 w-3 ml-1" />
                 </a>
@@ -118,17 +159,25 @@ export function Footer() {
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© {currentYear} Emil Krautmann. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">
+            © {currentYear} Emil Krautmann. All rights reserved.
+          </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
-            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Privacy Policy
             </Link>
-            <Link href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+            <Link
+              href="#"
+              className="text-gray-400 hover:text-white text-sm transition-colors"
+            >
               Terms of Service
             </Link>
           </div>
         </div>
       </div>
     </footer>
-  )
+  );
 }

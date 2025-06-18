@@ -1,9 +1,9 @@
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink } from "lucide-react"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const projects = [
   {
@@ -60,7 +60,7 @@ const projects = [
     year: "2021",
     impact: "Reduced inventory discrepancies by 85%",
   },
-]
+];
 
 export default function Projects() {
   return (
@@ -69,11 +69,20 @@ export default function Projects() {
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h1>
-            <p className="text-xl text-gray-600">A showcase of recent work and successful implementations</p>
+            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+              Featured Projects
+            </h1>
+            <p className="text-xl text-gray-600">
+              A showcase of recent work and successful implementations
+              <div>
+                <Badge className="bg-green-100 text-green-800">
+                  Coming soon!
+                </Badge>
+              </div>
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="h-full hover:shadow-lg transition-shadow">
                 <CardHeader>
@@ -113,13 +122,16 @@ export default function Projects() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
 
           <div className="text-center mt-12">
             <Card className="p-8 bg-gradient-to-r from-pink-100 to-purple-100">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Start Your Project?</h3>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Ready to Start Your Project?
+              </h3>
               <p className="text-gray-700 mb-6">
-                I'm available for new remote projects and would love to discuss how I can help bring your ideas to life.
+                I'm available for new remote projects and would love to discuss
+                how I can help bring your ideas to life.
               </p>
               <Button size="lg" className="bg-pink-600 hover:bg-pink-700">
                 Get In Touch
@@ -130,5 +142,5 @@ export default function Projects() {
       </main>
       <Footer />
     </div>
-  )
+  );
 }
