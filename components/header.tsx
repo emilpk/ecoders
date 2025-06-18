@@ -26,12 +26,12 @@ export function Header() {
           <Link href="/" className="flex items-center space-x-3">
             <Image
               src="/logo.png"
-              alt="ecoders.dev"
+              alt={`${myInfo.domain}`}
               width={40}
               height={40}
               className="rounded-lg"
             />
-            <span className="text-xl font-bold text-gray-900">ecoders.dev</span>
+            <span className="text-xl font-bold text-gray-900">{`${myInfo.domain}`}</span>
           </Link>
 
           {/* Desktop Navigation */}
