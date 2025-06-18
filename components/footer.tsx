@@ -34,8 +34,10 @@ export function Footer() {
                 <Github className="h-5 w-5" />
               </a>
               <a
-                href="#"
+                href={`${myInfo.socials.linkedIn}`}
                 className="text-gray-400 hover:text-pink-400 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <Linkedin className="h-5 w-5" />
               </a>

@@ -33,14 +33,29 @@ export function Hero() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button
+              <a
+                href={`${myInfo.socials.linkedIn}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-purple-300 text-purple-700 hover:bg-purple-50"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  View My LinkedIn Profile
+                </Button>
+              </a>
+
+              {/* <Button
                 size="lg"
                 variant="outline"
                 className="border-purple-300 text-purple-700 hover:bg-purple-50"
               >
                 <Download className="mr-2 h-5 w-5" />
                 Download Resume
-              </Button>
+              </Button> */}
             </div>
             <div className="flex items-center gap-6 text-sm text-gray-600">
               <div className="flex items-center gap-2">
