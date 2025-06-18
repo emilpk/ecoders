@@ -129,7 +129,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm">
               <li>
                 <a
-                  href="#"
+                  href="{`${myInfo.blogs.medium}`}"
                   className="text-gray-400 hover:text-white transition-colors flex items-center"
                 >
                   Blog on Medium
@@ -138,7 +138,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="{`${myInfo.blogs.hashnode}`}"
                   className="text-gray-400 hover:text-white transition-colors flex items-center"
                 >
                   Hashnode Articles
@@ -146,13 +146,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <span className="text-gray-400">Free Developer Tools</span>
-              </li>
-              <li>
-                <span className="text-gray-400">Digital Products</span>
-              </li>
-              <li>
-                <span className="text-gray-400">Newsletter</span>
+                <a
+                  href={`${myInfo.linktree}`}
+                  className="text-gray-400 hover:text-white transition-colors flex items-center"
+                >
+                  Promotions on Linktree
+                  <ExternalLink className="h-3 w-3 ml-1" />
+                </a>
               </li>
             </ul>
           </div>
