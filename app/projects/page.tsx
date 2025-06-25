@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import myInfo from "@/data/my-info.json";
 
 const projects = [
   {
@@ -133,9 +134,13 @@ export default function Projects() {
                 I'm available for new remote projects and would love to discuss
                 how I can help bring your ideas to life.
               </p>
-              <Button size="lg" className="bg-pink-600 hover:bg-pink-700">
-                Get In Touch
-              </Button>
+              <a
+                href={`mailto:${myInfo.email}?subject=Ready to start your project`}
+              >
+                <Button size="lg" className="bg-pink-600 hover:bg-pink-700">
+                  Get In Touch
+                </Button>
+              </a>
             </Card>
           </div>
         </div>
