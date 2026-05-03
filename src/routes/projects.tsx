@@ -93,7 +93,7 @@ function Projects() {
             </div>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <Card key={index} className="h-full hover:shadow-lg transition-shadow">
                 <CardHeader>
@@ -133,7 +133,7 @@ function Projects() {
                 </CardContent>
               </Card>
             ))}
-          </div>
+          </div> */}
 
           <div className="text-center mt-12">
             <Card className="p-8 bg-gradient-to-r from-pink-100 to-purple-100">
