@@ -1,0 +1,27 @@
+{
+  "enabled": true,
+  "name": "Update Docs on Source Change",
+  "description": "Watches source files (TypeScript, TSX, CSS, JSON, config files) and prompts the agent to update the README or /docs folder when changes are detected",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.css",
+      "src/**/*.json",
+      "*.config.ts",
+      "*.config.js",
+      "package.json",
+      "netlify.toml",
+      "vite.config.ts",
+      "tailwind.config.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "A source file was just edited. Review the change and determine if the README.md or any documentation in a /docs folder needs to be updated to reflect it. Consider: new features, changed APIs, updated configuration, new routes, new components, changed commands, or anything a developer reading the docs would need to know. If an update is warranted, make the minimal necessary change to keep the docs accurate and up to date."
+  },
+  "workspaceFolderName": "ecoders",
+  "shortName": "update-docs-on-source-change"
+}
